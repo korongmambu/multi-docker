@@ -2,7 +2,7 @@ services:
   - docker
   
 before_install:
-  - docker build -t korongmambu/react-test -f ./client/Dockerfile.dev
+  - docker build -t korongmambu/react-test -f ./client/Dockerfile.dev ./client/
   
 script:
   - docker run korongmambu/react-test npm run test -- --coverage
